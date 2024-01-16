@@ -21,8 +21,8 @@ const levelFilter = (arr, level, key, value) => {
             children: v?.children?.length && childLevel + 1 <= level ? childFilter(v.children, childLevel + 1) : [],
         }));
     };
-    targetFilter(childFilter(arr));
-    return targetOptions;
+    targetFilter(arr)
+    return childFilter(targetOptions);
 };
 
 // 获取命令行参数对象
